@@ -20,6 +20,7 @@ class RFListener(Thread):
 				if message == "": # Disconnected
 					d.close()
 					print "\033[1;36mDEV\033[0m: Disconnected."
+					time.sleep(1)
 					break
 				message = message.rstrip()
 				print "\033[1;34mMSG\033[0m: " + message
