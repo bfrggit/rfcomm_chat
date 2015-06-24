@@ -12,7 +12,7 @@ class RFWriter(Thread):
 			print "\033[1;33mSTD\033[0m: Ready for message input."
 			message = raw_input().rstrip()
 			try:
-				d = open(self._dev, "w")
+				d = open(self._dev, "rw")
 				d.write(message + "\r\n")
 				d.close()
 				print "\033[1;36mDEV\033[0m: Message wrote."
